@@ -4,6 +4,6 @@
 #fp-nav ul li a.active span,
 .fp-slidesNav ul li:hover a.active span,
 .fp-slidesNav ul li a.active span {
-  background-color: rgb(28, 145, 115);
+  background-color: #64ffda;
   font-family: 'Orbitron', sans-serif;
 }
