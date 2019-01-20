@@ -1,0 +1,9 @@
+/*Overrides must match specificity of pre-loaded styles!*/
+/*The simplest way to get the selector is with devtools*/
+#fp-nav ul li:hover a.active span,
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li:hover a.active span,
+.fp-slidesNav ul li a.active span {
+  background-color: rgb(28, 145, 115);
+  font-family: 'Orbitron', sans-serif;
+}
