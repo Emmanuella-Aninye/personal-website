@@ -41,7 +41,7 @@ class Homepage extends Component {
             </Row>
             </div>
             <div className="iconLogo">
-            <Row className="justify-content-md-center">
+            <Row >
             <Col md="auto" >
               <Image id="git_logo" src={githubLogo} className="LogoInHeader" onClick={((e) => window.open("https://github.com/Emmanuella-Aninye", "_blank"))}/>
               <Image id="linkedIn_logo" src={linkedInLogo} className="LogoInHeader" onClick={((e) => window.open("https://www.linkedin.com/in/emmanuella-aninye-a2487a97/", "_blank"))}/>
