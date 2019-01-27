@@ -10,6 +10,7 @@ import BurgerIcon from "../burger/BurgerIcon";
 import githubLogo from "../images/github.png";
 import linkedInLogo from "../images/linkedin.png";
 import instagramLogo from "../images/instagram.png";
+import emailLogo from "../images/emailLogo.png";
 import tempaLogo from "../images/newLogo.png";
 
 import { ReactComponent as Logo } from "../images/github.svg";
@@ -42,6 +43,8 @@ class Homepage extends Component {
               <Image id="git_logo" src={githubLogo} className="LogoInHeader" onClick={((e) => window.open("https://github.com/Emmanuella-Aninye", "_blank"))}/>
               <Image id="linkedIn_logo" src={linkedInLogo} className="LogoInHeader" onClick={((e) => window.open("https://www.linkedin.com/in/emmanuella-aninye-a2487a97/", "_blank"))}/>
               <Image id="instagram_logo" src={instagramLogo} className="LogoInHeader" onClick={((e) => window.open("https://www.instagram.com/_natural_e/", "_blank"))}/>
+              <Image id="instagram_logo" src={emailLogo} className="LogoInHeader" onClick={((e) => window.open("mailto:aninyeen@vcu.edu", "_blank"))}/>
+
             </Col>
           </Row>
           </div>
