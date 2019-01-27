@@ -18,25 +18,21 @@ class Homepage extends Component {
 
   render() {
     const Header = () => (
-      <div>
-        <div className="header" />
+        <div className="header" >
         <Image src={tempaLogo} rounded className="LogoInHeader" />
       </div>
     );
 
     return (
     <div>    
-      <div>
         <Header />
-    </div>
-    <div className="bodyText">
-        <Container >
+        <Container className="bodyText" >
         <div className="iconText">
-          <Row className="show-grid">
+          <Row >
             <Col xs={12} md={8}>
-              <h3>
+              <text className="text">
                 My Name is E and I am a web developer in the DC/Metro Area.
-              </h3>
+              </text>
             </Col>
             </Row>
             </div>
@@ -50,7 +46,6 @@ class Homepage extends Component {
           </Row>
           </div>
         </Container>
-      </div>
       </div>
     );
   }
