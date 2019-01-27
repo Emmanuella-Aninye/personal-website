@@ -92,12 +92,11 @@ a:hover {
 
 .iconText {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   font-family: 'Orbitron', sans-serif;
   color: #64ffda;
   z-index: 11;
-  width: 90%;
   height: 75px;
   top: 45%;;
   align-items: center;
@@ -112,6 +111,7 @@ a:hover {
   color: #64ffda;
   z-index: 11;
   width: 90%;
+  top: 55%;;
   align-items: center;
   position: fixed;
   background-color: #0a192f;
