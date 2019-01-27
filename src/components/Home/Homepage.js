@@ -1,74 +1,56 @@
 import React, { Component } from "react";
-import ReactFullpage from "@fullpage/react-fullpage";
+import Row from "react-bootstrap/Row";
+import { Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
+import Image from "react-bootstrap/Image";
 import "./homepage.css";
 import "./override.css";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import BurgerIcon from "../burger/BurgerIcon";
+import githubLogo from "../images/github.png";
+import linkedInLogo from "../images/linkedin.png";
+import instagramLogo from "../images/instagram.png";
+import tempaLogo from "../images/newLogo.png";
+
+import { ReactComponent as Logo } from "../images/github.svg";
 
 class Homepage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      sectionsColor: [...originalColors],
-      fullpages: [
-        {
-          text: "Welcome to my website. My name is E and I am a developer"
-        }
-      ]
-    };
-  }
 
-  onLeave(origin, destination, direction) {
-    console.log("onLeave", { origin, destination, direction });
-    // arguments are mapped in order of fullpage.js callback arguments do something
-    // with the event
-  }
   render() {
-    const { fullpages } = this.state;
-
-    if (!fullpages.length) {
-      return null;
-    }
-
     const Header = () => (
-      <div
-        className="body"
-        style={{
-          position: "fixed",
-          top: 0,
-          zIndex: 100,
-          width: "100%"
-        }}
-      >
-        <Router>
-          <ul>
-            <h3>
-              <Link to="/home">Home</Link>
-            </h3>
-          </ul>
-        </Router>
+      <div>
+        <div className="header" />
+        <Image src={tempaLogo} rounded className="LogoInHeader" />
       </div>
     );
 
     return (
-      <div className="App">
+    <div>    
+      <div>
         <Header />
-        <ReactFullpage
-          debug /* Debug logging */
-          scrollOverflow
-          navigation
-          onLeave={this.onLeave.bind(this)}
-          sectionsColor={this.state.sectionsColor}
-          pluginWrapper={pluginWrapper}
-          render={comp => (
-            <ReactFullpage.Wrapper>
-              {fullpages.map(({ text }) => (
-                <div key={text} className="section">
-                  <h2>{text}</h2>
-                </div>
-              ))}
-            </ReactFullpage.Wrapper>
-          )}
-        />
+    </div>
+    <div className="bodyText">
+        <Container >
+        <div className="iconText">
+          <Row className="show-grid">
+            <Col xs={12} md={8}>
+              <h3>
+                My Name is E and I am a web developer in the DC/Metro Area.
+              </h3>
+            </Col>
+            </Row>
+            </div>
+            <div className="iconLogo">
+            <Row className="justify-content-md-center">
+            <Col md="auto" >
+              <Image id="git_logo" src={githubLogo} className="LogoInHeader" onClick={((e) => window.open("https://github.com/Emmanuella-Aninye", "_blank"))}/>
+              <Image id="linkedIn_logo" src={linkedInLogo} className="LogoInHeader" onClick={((e) => window.open("https://www.linkedin.com/in/emmanuella-aninye-a2487a97/", "_blank"))}/>
+              <Image id="instagram_logo" src={instagramLogo} className="LogoInHeader" onClick={((e) => window.open("https://www.instagram.com/_natural_e/", "_blank"))}/>
+            </Col>
+          </Row>
+          </div>
+        </Container>
+      </div>
       </div>
     );
   }
@@ -79,7 +61,5 @@ const pluginWrapper = () => {
    * require('fullpage.js/vendors/scrolloverflow'); // Optional. When using scrollOverflow:true
    */
 };
-
-const originalColors = ["#001a33", "#001a33", "#001a33"];
 
 export default Homepage;
