@@ -43,7 +43,7 @@ class Homepage extends Component {
               <Image id="git_logo" src={githubLogo} className="LogoInHeader" onClick={((e) => window.open("https://github.com/Emmanuella-Aninye", "_blank"))}/>
               <Image id="linkedIn_logo" src={linkedInLogo} className="LogoInHeader" onClick={((e) => window.open("https://www.linkedin.com/in/emmanuella-aninye-a2487a97/", "_blank"))}/>
               <Image id="instagram_logo" src={instagramLogo} className="LogoInHeader" onClick={((e) => window.open("https://www.instagram.com/_natural_e/", "_blank"))}/>
-              <Image id="instagram_logo" src={emailLogo} className="LogoInHeader" onClick={((e) => window.open("mailto:aninyeen@vcu.edu", "_blank"))}/>
+              <Image id="instagram_logo" src={emailLogo} className="LogoInHeader" onClick={((e) => window.open("mailto:aninyeen@gmail.com", "_blank"))}/>
 
             </Col>
           </Row>
